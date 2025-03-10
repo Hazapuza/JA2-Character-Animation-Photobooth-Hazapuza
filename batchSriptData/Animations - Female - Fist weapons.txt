@@ -1,0 +1,21 @@
+; Animation name, end frame, sti name, directions
+;------------------------------------------------------
+("Standing - Empty Hands - Idle - Female",8,"F_N_STD",8),
+("Standing - Empty Hands - Dodge - Female",6,"F_DODGE",8),
+("Standing - Empty Hands - Drunk - Female",20,"F_N_DRUNK",8),
+("Standing - Empty Hands - Walk - Female",12,"F_N_WALK",8),
+("Standing - Empty Hands - Run - Female",12,"F_N_RUN",8),
+("Standing - Empty Hands - Pain - Female",14,"F_N_PAIN",8),
+("Standing - Punch",24,"F_PUNCH",8),
+("Standing To Crouch - Empty Hands - Female",15,"F_N_CRCH",8),
+("Crouch - Empty Hands - Walk - Female",22,"F_N_SWAT",8),
+("Crouch - Empty Hands - Punch - Female",14,"F_C_PUNCH",8),
+("Prone - Pistol - Crawl & Shoot",29,"F_N_PRNE",8),
+("Standing - Rifle - Hurt Walk - Female",12,"F_R_WALK_HURT",8),
+("Standing - Empty Hands - Karate punch",24,"F_K_PUNCH",8),
+("Standing - Empty Hands - Karate low kick",44,"F_K_LOWKICK",8),
+("Standing - Empty Hands - Karate spin kick",70,"F_K_SPINKICK",8),
+;------------------------------------------------------
+; NOT IN USE!
+;------------------------------------------------------
+;("Prone - Pistol - Crawl & Shoot - Female UNFINISHED",29,"F_N_PRNE",8),

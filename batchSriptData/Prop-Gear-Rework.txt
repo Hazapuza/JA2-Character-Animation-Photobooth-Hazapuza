@@ -1,0 +1,5 @@
+; :: separator, palette filename, prefix, suffix
+;------------------------------------------------------
+Hats.stp :: Prop1 :: _NVG1
+Hats.stp :: Prop2 :: _NVG3
+Hats.stp :: Prop3 :: _NVG4

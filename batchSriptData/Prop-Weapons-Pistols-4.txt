@@ -1,0 +1,26 @@
+; :: separator, palette filename, prefix, suffix
+;------------------------------------------------------
+guns_universal_v2.stp :: Prop1 :: _AUTOMAG3
+guns_universal_v2.stp :: Prop2 :: _lAUTOMAG3
+guns_universal_v2.stp :: Prop3 :: _TOKAREV
+guns_universal_v2.stp :: Prop4 :: _lTOKAREV
+guns_universal_v2.stp :: Prop5 :: _M29SATAN
+guns_universal_v2.stp :: Prop6 :: _lM29SATAN
+guns_universal_v2.stp :: Prop7 :: _ANACONDA
+guns_universal_v2.stp :: Prop8 :: _lANACONDA
+guns_universal_v2.stp :: Prop9 :: _MR96
+guns_universal_v2.stp :: Prop10 :: _lMR96
+guns_universal_v2.stp :: Prop11 :: _P226
+guns_universal_v2.stp :: Prop12 :: _lP226
+guns_universal_v2.stp :: Prop13 :: _DEAGLE44
+guns_universal_v2.stp :: Prop14 :: _lDEAGLE44
+guns_universal_v2.stp :: Prop15 :: _DEAGLE357
+guns_universal_v2.stp :: Prop16 :: _lDEAGLE357
+guns_universal_v2.stp :: Prop17 :: _GYURZA
+guns_universal_v2.stp :: Prop18 :: _lGYURZA
+guns_universal_v2.stp :: Prop19 :: _FNPRO9
+guns_universal_v2.stp :: Prop20 :: _lFNPRO9
+guns_universal_v2.stp :: Prop21 :: _BERETTA92
+guns_universal_v2.stp :: Prop22 :: _lBERETTA92
+guns_universal_v2.stp :: Prop23 :: _HARTFORD
+guns_universal_v2.stp :: Prop24 :: _lHARTFORD

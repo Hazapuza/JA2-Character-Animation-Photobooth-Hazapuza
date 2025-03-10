@@ -15,5 +15,9 @@
 ("Crouch - Knife - Stab - Female",14,"F_C_STAB",8),
 ("Standing - Crowbar - Hit - Female",19,"F_CROWBAR",8),
 ("Crouch - Crowbar - Hit - Female",14,"F_C_CROWBAR",8),
-("Prone - Pistol - Crawl & Shoot - Female UNFINISHED",29,"F_N_PRNE",8),
+("Prone - Pistol - Crawl & Shoot",29,"F_N_PRNE",8),
 ("Standing - Rifle - Hurt Walk - Female",12,"F_R_WALK_HURT",8),
+;------------------------------------------------------
+; NOT IN USE!
+;------------------------------------------------------
+;("Prone - Pistol - Crawl & Shoot - Female UNFINISHED",29,"F_N_PRNE",8),

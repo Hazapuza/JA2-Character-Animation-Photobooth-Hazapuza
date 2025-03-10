@@ -8,5 +8,16 @@ Prop-Weapons-1.txt :: Assault rifles (FN FAL, M16, AK47, FAMAS, SCAR-H) and snip
 Prop-Weapons-4.txt :: Pistols (USP, MP5K, Desert eagle, SW500, Sawnoff-shotgun)
 Prop-Weapons-5.txt :: Melee weapons (Combat knife, crowbar)
 Prop-Weapons-6.txt :: Heavy weapons (LAW, mortar)
-Prop-Weapons-tutorial.txt :: Weapon Tutorial ( G11 )
-Prop-Weapons-7.txt :: WH40K
+Prop-Weapons-Rework.txt :: Rework Set 1
+Prop-Weapons-Rifles-8.txt :: Rifles Set 8
+Prop-Weapons-Rifles-9.txt :: Rifles Set 9
+Prop-Weapons-Melee-1.txt :: Melee Weapons Set 1
+Prop-Gear-1.txt :: Gear Set 1
+Prop-Gear-2.txt :: Gear Set 2
+Prop-Gear-Rework.txt :: Gear Set Rework
+Prop-Weapons-Pistols-1.txt :: Pistols Set 1
+Prop-Weapons-Pistols-2.txt :: Pistols Set 2
+Prop-Weapons-Pistols-3.txt :: Pistols Set 3
+Prop-Weapons-Pistols-4.txt :: Pistols Set 4
+Prop-Weapons-Pistols-5.txt :: Pistols Set 5
+Prop-Weapons-Fist.txt :: Fist Weapons

@@ -1,0 +1,12 @@
+@echo off
+setlocal enabledelayedexpansion
+
+rem change these to wherever they are located on your machine
+set _BLENDERDIR=C:\\Program Files\\Blender Foundation\\Blender 4.0
+set _BLENDFILE=JA2 2.9_033.blend
+set _PYTHONFILE=batchrender-Animations - Big male - Fist weapons.py
+
+
+JA2-BatchRender.exe "%_BLENDERDIR%" "%_BLENDFILE%" "%_PYTHONFILE%"
+
+pause

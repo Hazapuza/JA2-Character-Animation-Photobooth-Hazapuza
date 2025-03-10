@@ -1,0 +1,12 @@
+; :: separator, palette filename, prefix, suffix
+;------------------------------------------------------
+Hats.stp :: Prop1 :: _Speclegs
+Hats.stp :: Prop2 :: _Kvlrlegs
+Hats.stp :: Prop3 :: _Twalegs
+Hats.stp :: Prop4 :: _Dynlegs
+;Hats.stp :: Prop6 :: _Dressvest
+;Hats.stp :: Prop7 :: _Dresslegs
+;Hats.stp :: Prop8 :: _Zylonvest
+;Hats.stp :: Prop9 :: _Zylonlegs
+;swat_blue.act :: Prop20 :: _SWATvest
+;swat_blue.act :: Prop25 :: _SWATlegs

@@ -1,0 +1,27 @@
+; :: separator, palette filename, prefix, suffix
+;------------------------------------------------------
+guns_universal_v2.stp :: Prop1 :: _AMD65
+;guns_universal_v2.stp :: Prop2 :: _QBZ97
+;guns_universal_v2.stp :: Prop3 :: _SG551
+;guns_universal_v2.stp :: Prop4 :: _SG542
+;guns_universal_v2.stp :: Prop5 :: _SG540
+;guns_universal_v2.stp :: Prop6 :: _SAF
+;guns_universal_v2.stp :: Prop7 :: _SAFSD
+;guns_universal_v2.stp :: Prop8 :: _VALMETM82
+;guns_universal_v2.stp :: Prop9 :: _TAVOR
+;guns_universal_v2.stp :: Prop10 :: _VSK94
+;guns_universal_v2.stp :: Prop11 :: _CX4STORM
+;guns_universal_v2.stp :: Prop12 :: _MP7
+;guns_universal_v2.stp :: Prop13 :: _OTS39
+;guns_universal_v2.stp :: Prop14 :: _MP5A4
+;guns_universal_v2.stp :: Prop15 :: _MP5SD5
+;guns_universal_v2.stp :: Prop16 :: _MP540
+;guns_universal_v2.stp :: Prop17 :: _MP510
+guns_universal_v2.stp :: Prop18 :: _SV98
+guns_universal_v2.stp :: Prop19 :: _SA24
+guns_universal_v2.stp :: Prop20 :: _MP4144
+guns_universal_v2.stp :: Prop21 :: _M501
+guns_universal_v2.stp :: Prop22 :: _AWM
+guns_universal_v2.stp :: Prop23 :: _R93
+guns_universal_v2.stp :: Prop24 :: _M24
+guns_universal_v2.stp :: Prop25 :: _M40A1

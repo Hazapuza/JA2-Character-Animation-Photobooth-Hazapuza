@@ -1,0 +1,17 @@
+; Animation name, end frame, sti name, directions
+;------------------------------------------------------
+("Standing - Empty Hands - Idle",8,"S_N_STD",8),
+("Standing - Empty Hands - Walk",12,"S_N_WALK",8),
+("Standing - Empty Hands - Hurt Walk",12,"S_N_WALK_HURT",8),
+("Standing - Empty Hands - Run",12,"S_N_RUN",8),
+("Standing - Empty Hands - Pain",14,"S_N_PAIN",8),
+("Standing - Empty Hands - Drunk",20,"S_N_DRUNK",8),
+("Standing - Empty Hands - Dodge",6,"S_DODGE",8),
+("Standing - Punch",24,"S_PUNCH",8),
+("Standing To Crouch - Empty hands",15,"S_N_CRCH",8),
+("Crouch - Empty hands - Walk",22,"S_N_SWAT",8),
+("Crouch - Empty Hands - Punch",14,"S_C_PUNCH",8),
+("Prone - Pistol - Crawl & Shoot",29,"S_N_PRNE",8),
+("Standing - Empty Hands - Karate punch",24,"S_K_PUNCH",8),
+("Standing - Empty Hands - Karate low kick",44,"S_K_LOWKICK",8),
+("Standing - Empty Hands - Karate spin kick",70,"S_K_SPINKICK",8),

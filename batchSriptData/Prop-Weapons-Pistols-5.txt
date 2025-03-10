@@ -1,0 +1,22 @@
+; :: separator, palette filename, prefix, suffix
+;------------------------------------------------------
+guns_universal_v2.stp :: Prop1 :: _M83PREM
+guns_universal_v2.stp :: Prop2 :: _lM83PREM
+guns_universal_v2.stp :: Prop3 :: _REDHAWK
+guns_universal_v2.stp :: Prop4 :: _lREDHAWK
+guns_universal_v2.stp :: Prop5 :: _ALASKAN
+guns_universal_v2.stp :: Prop6 :: _lALASKAN
+guns_universal_v2.stp :: Prop7 :: _DELTA
+guns_universal_v2.stp :: Prop8 :: _lDELTA
+guns_universal_v2.stp :: Prop9 :: _ECLIPSE
+guns_universal_v2.stp :: Prop10 :: _lECLIPSE
+guns_universal_v2.stp :: Prop11 :: _GRIZZLY
+guns_universal_v2.stp :: Prop12 :: _lGRIZZLY
+guns_universal_v2.stp :: Prop13 :: _P7M8
+guns_universal_v2.stp :: Prop14 :: _lP7M8
+guns_universal_v2.stp :: Prop15 :: _AKPISTOL
+guns_universal_v2.stp :: Prop16 :: _lAKPISTOL
+guns_universal_v2.stp :: Prop17 :: _PSPRAY
+guns_universal_v2.stp :: Prop18 :: _lPSPRAY
+;guns_universal_v2.stp :: Prop19 :: _JMATICMP
+;guns_universal_v2.stp :: Prop20 :: _lJMATICMP

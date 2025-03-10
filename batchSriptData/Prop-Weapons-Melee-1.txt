@@ -1,0 +1,18 @@
+; :: separator, palette filename, prefix, suffix
+;------------------------------------------------------
+;guns_universal_v2.stp :: Prop1 :: _machete
+;guns_universal_v2.stp :: Prop2 :: _machete2
+;guns_universal_v2.stp :: Prop3 :: _knife2
+;guns_universal_v2.stp :: Prop4 :: _katana
+;guns_universal_v2.stp :: Prop5 :: _sabre
+;guns_universal_v2.stp :: Prop6 :: _bigknife
+;guns_universal_v2.stp :: Prop7 :: _cutlass
+;guns_universal_v2.stp :: Prop8 :: _kcbknife
+;guns_universal_v2.stp :: Prop9 :: _boxknife
+guns_universal_v2.stp :: Prop10 :: _umbrella
+guns_universal_v2.stp :: Prop11 :: _baton
+guns_universal_v2.stp :: Prop12 :: _nstick
+guns_universal_v2.stp :: Prop13 :: _shovel
+guns_universal_v2.stp :: Prop14 :: _stunner
+guns_universal_v2.stp :: Prop15 :: _wrench
+guns_universal_v2.stp :: Prop16 :: _fireaxe

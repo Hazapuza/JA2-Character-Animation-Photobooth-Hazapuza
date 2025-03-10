@@ -6,3 +6,5 @@ Hats_no_EOD.stp
 guns_universal_v2.stp
 camoprops.stp
 Colormap.act
+swat_blue.act
+guns_desert_tan.act

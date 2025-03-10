@@ -1,0 +1,27 @@
+; :: separator, palette filename, prefix, suffix
+;------------------------------------------------------
+;Hats.stp :: Prop1 :: _Altyn
+;Hats.stp :: Prop2 :: _Ushanka
+;Hats.stp :: Prop3 :: _UScap
+;Hats.stp :: Prop4 :: _USSRcap
+;Hats.stp :: Prop5 :: _RUScap
+;Hats.stp :: Prop6 :: _SWAThelm
+;Hats.stp :: Prop7 :: _Steelhelm
+;Hats.stp :: Prop8 :: _Goggles
+;Hats.stp :: Prop9 :: _Dynvest
+;Hats.stp :: Prop10 :: _Twahelm
+;Hats.stp :: Prop11 :: _Dynhelm
+;Hats.stp :: Prop12 :: _Spechelm
+;Hats.stp :: Prop13 :: _Flakvest
+;Hats.stp :: Prop14 :: _Twavest
+;Hats.stp :: Prop15 :: _Kvlrhelm
+;Hats.stp :: Prop16 :: _Blackcap
+;Hats.stp :: Prop17 :: _Guardvest
+;Hats.stp :: Prop18 :: _Bigradio
+;Hats.stp :: Prop19 :: _Headset
+Hats.stp :: Prop20 :: _SWATvest
+;Hats.stp :: Prop21 :: _CP
+;Hats.stp :: Prop22 :: _Medradio
+;Hats.stp :: Prop23 :: _CP2
+;Hats.stp :: Prop24 :: _CP3
+Hats.stp :: Prop25 :: _SWATlegs

@@ -91,8 +91,11 @@ for i in range(len(animationArray)):
 
 	# Bodytypes
 	bpy.data.objects["Body - RGM"].hide_render = True
-	bpy.data.objects["Body - BGM"].hide_render = True
-	bpy.data.objects["Body - FGM"].hide_render = False
+	bpy.data.objects["Body - BGM"].hide_render = False
+	bpy.data.objects["Body - FGM"].hide_render = True
+	bpy.data.objects["RGM - Vest Target"].hide_render = True
+	bpy.data.objects["BGM - Vest Target"].hide_render = True
+	bpy.data.objects["FGM - Vest Target"].hide_render = True
 	bpy.data.objects["Body - Elite Camo"].hide_render = True
 	bpy.data.objects["SpaceMarine__mesh"].hide_render = True
 	bpy.data.objects["Body - FGM - Head"].hide_render = True # For EOD suit
@@ -161,7 +164,7 @@ for i in range(len(animationArray)):
 
 
 	# Display props in renders depending on the set
-	renderSet = 2
+	renderSet = 23
 	if renderSet == 0:
 		# Do not render props
 		for j in range(1,26):
@@ -344,8 +347,8 @@ for i in range(len(animationArray)):
 		bpy.data.objects["Weapon - HK USP - Left Hand"].hide_render = False
 		bpy.data.objects["Weapon - HK MP5K"].hide_render = False
 		bpy.data.objects["Weapon - HK MP5K - Left Hand"].hide_render = False
-		bpy.data.objects["Weapon - Desert Eagle"].hide_render = False
-		bpy.data.objects["Weapon - Desert Eagle - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Desert Eagle 50"].hide_render = False
+		bpy.data.objects["Weapon - Desert Eagle 50 - Left Hand"].hide_render = False
 		bpy.data.objects["Weapon - SW500"].hide_render = False
 		bpy.data.objects["Weapon - SW500 - Left Hand"].hide_render = False
 		bpy.data.objects["Weapon - UZI MP"].hide_render = False
@@ -361,8 +364,8 @@ for i in range(len(animationArray)):
 			bpy.data.objects["MuzzleFlash - HK USP - Left Hand"].hide_render = False
 			bpy.data.objects["MuzzleFlash - HK MP5K"].hide_render = False
 			bpy.data.objects["MuzzleFlash - HK MP5K - Left Hand"].hide_render = False
-			bpy.data.objects["MuzzleFlash - Desert Eagle"].hide_render = False
-			bpy.data.objects["MuzzleFlash - Desert Eagle - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Desert Eagle 50"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Desert Eagle 50 - Left Hand"].hide_render = False
 			bpy.data.objects["MuzzleFlash - SW500"].hide_render = False
 			bpy.data.objects["MuzzleFlash - SW500 - Left Hand"].hide_render = False
 			bpy.data.objects["MuzzleFlash - UZI MP"].hide_render = False
@@ -373,8 +376,8 @@ for i in range(len(animationArray)):
 			bpy.data.objects["MuzzleFlash - HK USP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
 			bpy.data.objects["MuzzleFlash - HK MP5K"].animation_data.action = bpy.data.actions.get(currentAction)
 			bpy.data.objects["MuzzleFlash - HK MP5K - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
-			bpy.data.objects["MuzzleFlash - Desert Eagle"].animation_data.action = bpy.data.actions.get(currentAction)
-			bpy.data.objects["MuzzleFlash - Desert Eagle - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Desert Eagle 50"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Desert Eagle 50 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
 			bpy.data.objects["MuzzleFlash - SW500"].animation_data.action = bpy.data.actions.get(currentAction)
 			bpy.data.objects["MuzzleFlash - SW500 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
 			bpy.data.objects["MuzzleFlash - UZI MP"].animation_data.action = bpy.data.actions.get(currentAction)
@@ -384,13 +387,13 @@ for i in range(len(animationArray)):
 		if currentAction in pistolActions:
 			bpy.data.objects["MuzzleFlash - HK USP"].hide_render = False
 			bpy.data.objects["MuzzleFlash - HK MP5K"].hide_render = False
-			bpy.data.objects["MuzzleFlash - Desert Eagle"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Desert Eagle 50"].hide_render = False
 			bpy.data.objects["MuzzleFlash - SW500"].hide_render = False
 			bpy.data.objects["MuzzleFlash - UZI MP"].hide_render = False
 			bpy.data.objects["MuzzleFlash - SawnOff"].hide_render = False
 			bpy.data.objects["MuzzleFlash - HK USP"].animation_data.action = bpy.data.actions.get(currentAction)
 			bpy.data.objects["MuzzleFlash - HK MP5K"].animation_data.action = bpy.data.actions.get(currentAction)
-			bpy.data.objects["MuzzleFlash - Desert Eagle"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Desert Eagle 50"].animation_data.action = bpy.data.actions.get(currentAction)
 			bpy.data.objects["MuzzleFlash - SW500"].animation_data.action = bpy.data.actions.get(currentAction)
 			bpy.data.objects["MuzzleFlash - UZI MP"].animation_data.action = bpy.data.actions.get(currentAction)
 			bpy.data.objects["MuzzleFlash - SawnOff"].animation_data.action = bpy.data.actions.get(currentAction)
@@ -461,18 +464,896 @@ for i in range(len(animationArray)):
 			helpers.disablePropRenderlayer(j)
 			
 	elif renderSet == 7:
-		bpy.data.objects["Weapon - G11"].hide_render = False
+		bpy.data.objects["Weapon - FNFAL"].hide_render = False
+		bpy.data.objects["Weapon - Galil AR"].hide_render = True
 		if currentAction in rifleActions:
-			bpy.data.objects["MuzzleFlash - G11"].hide_render = False
-			bpy.data.objects["MuzzleFlash - G11"].animation_data.action = bpy.data.actions.get(currentAction)
-		for j in range(2,26):
+			bpy.data.objects["MuzzleFlash - Galil AR"].hide_render = True
+			bpy.data.objects["MuzzleFlash - FNFAL"].hide_render = False
+			bpy.data.objects["MuzzleFlash - FNFAL"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Galil AR"].animation_data.action = bpy.data.actions.get(currentAction)
+
+		for j in range(1,8):
 			helpers.disablePropRenderlayer(j)
-		
-	elif renderSet == 8:
-		bpy.data.objects["Weapon - Bolter"].hide_render = False
-		for j in range(2,26):
+		for j in range(9,26):
 			helpers.disablePropRenderlayer(j)
 
+	elif renderSet == 8:
+		bpy.data.objects["Weapon - AMD65"].hide_render = False
+		bpy.data.objects["Weapon - SV98"].hide_render = False
+		bpy.data.objects["Weapon - SA24"].hide_render = False
+		bpy.data.objects["Weapon - MP41/44"].hide_render = False
+		bpy.data.objects["Weapon - M501"].hide_render = False
+		bpy.data.objects["Weapon - AWM"].hide_render = False
+		bpy.data.objects["Weapon - R93"].hide_render = False
+		bpy.data.objects["Weapon - M24"].hide_render = False
+		bpy.data.objects["Weapon - M40A1"].hide_render = False
+		if currentAction in rifleActions:
+			bpy.data.objects["MuzzleFlash - AMD65"].hide_render = False
+			bpy.data.objects["MuzzleFlash - SV98"].hide_render = False
+			bpy.data.objects["MuzzleFlash - SA24"].hide_render = False
+			bpy.data.objects["MuzzleFlash - MP41/44"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M501"].hide_render = False
+			bpy.data.objects["MuzzleFlash - AWM"].hide_render = False
+			bpy.data.objects["MuzzleFlash - R93"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M24"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M40A1"].hide_render = False
+			bpy.data.objects["MuzzleFlash - AMD65"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - SV98"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - SA24"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - MP41/44"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - M501"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - AWM"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - R93"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - M24"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - M40A1"].animation_data.action = bpy.data.actions.get(currentAction)
+
+		for j in range(2,18):
+			helpers.disablePropRenderlayer(j)
+
+	elif renderSet == 9:
+		bpy.data.objects["Weapon - Winchester 1895"].hide_render = False
+		bpy.data.objects["Weapon - SR47"].hide_render = False
+		bpy.data.objects["Weapon - SVU"].hide_render = False
+		if currentAction in rifleActions:
+			bpy.data.objects["MuzzleFlash - Winchester 1895"].hide_render = False
+			bpy.data.objects["MuzzleFlash - SR47"].hide_render = False
+			bpy.data.objects["MuzzleFlash - SVU"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Winchester 1895"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - SR47"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - SVU"].animation_data.action = bpy.data.actions.get(currentAction)
+
+		for j in range(1,6):
+			helpers.disablePropRenderlayer(j)
+		for j in range(7,16):
+			helpers.disablePropRenderlayer(j)
+		for j in range(17,24):
+			helpers.disablePropRenderlayer(j)
+		for j in range(25,26):
+			helpers.disablePropRenderlayer(j)
+
+	elif renderSet == 10:
+		bpy.data.objects["Weapon - Machete"].hide_render = False
+		bpy.data.objects["Weapon - Machete"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Machete 2"].hide_render = False
+		bpy.data.objects["Weapon - Machete 2"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Fighting Knife"].hide_render = False
+		bpy.data.objects["Weapon - Fighting Knife"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Katana"].hide_render = False
+		bpy.data.objects["Weapon - Katana"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Sabre"].hide_render = False
+		bpy.data.objects["Weapon - Sabre"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Rambo Knife"].hide_render = False
+		bpy.data.objects["Weapon - Rambo Knife"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Ka-Bar Cutlass"].hide_render = False
+		bpy.data.objects["Weapon - Ka-Bar Cutlass"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - KCB Knife"].hide_render = False
+		bpy.data.objects["Weapon - KCB Knife"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Box Knife"].hide_render = False
+		bpy.data.objects["Weapon - Box Knife"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Umbrella"].hide_render = False
+		bpy.data.objects["Weapon - Umbrella"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Baton"].hide_render = False
+		bpy.data.objects["Weapon - Baton"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Nightstick"].hide_render = False
+		bpy.data.objects["Weapon - Nightstick"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Shovel"].hide_render = False
+		bpy.data.objects["Weapon - Shovel"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Stunner"].hide_render = False
+		bpy.data.objects["Weapon - Stunner"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Pipe Wrench"].hide_render = False
+		bpy.data.objects["Weapon - Pipe Wrench"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		bpy.data.objects["Weapon - Fire Axe"].hide_render = False
+		bpy.data.objects["Weapon - Fire Axe"].animation_data.action = bpy.data.actions.get("DisplayProp")
+		if currentAction in knifeActions:
+			bpy.data.objects["Weapon - Machete"].hide_render = False
+			bpy.data.objects["Weapon - Machete"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Machete 2"].hide_render = False
+			bpy.data.objects["Weapon - Machete 2"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Fighting Knife"].hide_render = False
+			bpy.data.objects["Weapon - Fighting Knife"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Katana"].hide_render = False
+			bpy.data.objects["Weapon - Katana"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Sabre"].hide_render = False
+			bpy.data.objects["Weapon - Sabre"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Rambo Knife"].hide_render = False
+			bpy.data.objects["Weapon - Rambo Knife"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Ka-Bar Cutlass"].hide_render = False
+			bpy.data.objects["Weapon - Ka-Bar Cutlass"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - KCB Knife"].hide_render = False
+			bpy.data.objects["Weapon - KCB Knife"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Box Knife"].hide_render = False
+			bpy.data.objects["Weapon - Box Knife"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Umbrella"].hide_render = False
+			bpy.data.objects["Weapon - Umbrella"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Baton"].hide_render = False
+			bpy.data.objects["Weapon - Baton"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Nightstick"].hide_render = False
+			bpy.data.objects["Weapon - Nightstick"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Shovel"].hide_render = False
+			bpy.data.objects["Weapon - Shovel"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Stunner"].hide_render = False
+			bpy.data.objects["Weapon - Stunner"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Pipe Wrench"].hide_render = False
+			bpy.data.objects["Weapon - Pipe Wrench"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Fire Axe"].hide_render = False
+			bpy.data.objects["Weapon - Fire Axe"].animation_data.action = bpy.data.actions.get(currentAction)
+		if currentAction == "Crouch - Knife - Stab - Female" or currentAction == "Crouch - Knife - Stab":
+			bpy.data.objects["Weapon - Machete"].hide_render = True
+			bpy.data.objects["Weapon - Machete"].animation_data.action = bpy.data.actions.get("HideMuzzleFlash")
+			bpy.data.objects["Weapon - Machete Alt hold"].hide_render = False
+			bpy.data.objects["Weapon - Machete 2"].hide_render = True
+			bpy.data.objects["Weapon - Machete 2"].animation_data.action = bpy.data.actions.get("HideMuzzleFlash")
+			bpy.data.objects["Weapon - Machete 2 Alt hold"].hide_render = False
+			bpy.data.objects["Weapon - Fighting Knife"].hide_render = True
+			bpy.data.objects["Weapon - Fighting Knife"].animation_data.action = bpy.data.actions.get("HideMuzzleFlash")
+			bpy.data.objects["Weapon - Fighting Knife Alt hold"].hide_render = False
+			bpy.data.objects["Weapon - Katana"].hide_render = True
+			bpy.data.objects["Weapon - Katana"].animation_data.action = bpy.data.actions.get("HideMuzzleFlash")
+			bpy.data.objects["Weapon - Katana Alt hold"].hide_render = False
+			bpy.data.objects["Weapon - Sabre"].hide_render = True
+			bpy.data.objects["Weapon - Sabre"].animation_data.action = bpy.data.actions.get("HideMuzzleFlash")
+			bpy.data.objects["Weapon - Sabre Alt hold"].hide_render = False
+			bpy.data.objects["Weapon - Rambo Knife"].hide_render = True
+			bpy.data.objects["Weapon - Rambo Knife"].animation_data.action = bpy.data.actions.get("HideMuzzleFlash")
+			bpy.data.objects["Weapon - Rambo Knife Alt hold"].hide_render = False
+			bpy.data.objects["Weapon - Ka-Bar Cutlass"].hide_render = True
+			bpy.data.objects["Weapon - Ka-Bar Cutlass"].animation_data.action = bpy.data.actions.get("HideMuzzleFlash")
+			bpy.data.objects["Weapon - Ka-Bar Cutlass Alt hold"].hide_render = False
+			bpy.data.objects["Weapon - KCB Knife"].hide_render = True
+			bpy.data.objects["Weapon - KCB Knife"].animation_data.action = bpy.data.actions.get("HideMuzzleFlash")
+			bpy.data.objects["Weapon - KCB Knife Alt hold"].hide_render = False
+			bpy.data.objects["Weapon - Box Knife"].hide_render = True
+			bpy.data.objects["Weapon - Box Knife"].animation_data.action = bpy.data.actions.get("HideMuzzleFlash")
+			bpy.data.objects["Weapon - Box Knife Alt hold"].hide_render = False
+			bpy.data.objects["Weapon - Umbrella"].hide_render = True
+			bpy.data.objects["Weapon - Umbrella"].animation_data.action = bpy.data.actions.get("HideMuzzleFlash")
+			bpy.data.objects["Weapon - Umbrella Alt hold"].hide_render = False
+		if currentAction == "Standing - Knife - Throw - Female" or currentAction == "Standing - Knife - Throw":
+			bpy.data.objects["Weapon - Machete"].hide_render = False
+			bpy.data.objects["Weapon - Machete Alt hold"].hide_render = True
+			bpy.data.objects["Weapon - Machete"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Machete 2"].hide_render = False
+			bpy.data.objects["Weapon - Machete 2 Alt hold"].hide_render = True
+			bpy.data.objects["Weapon - Machete 2"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Fighting Knife"].hide_render = False
+			bpy.data.objects["Weapon - Fighting Knife Alt hold"].hide_render = True
+			bpy.data.objects["Weapon - Fighting Knife"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Katana"].hide_render = False
+			bpy.data.objects["Weapon - Katana Alt hold"].hide_render = True
+			bpy.data.objects["Weapon - Katana"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Sabre"].hide_render = False
+			bpy.data.objects["Weapon - Sabre Alt hold"].hide_render = True
+			bpy.data.objects["Weapon - Sabre"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Rambo Knife"].hide_render = False
+			bpy.data.objects["Weapon - Rambo Knife Alt hold"].hide_render = True
+			bpy.data.objects["Weapon - Rambo Knife"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Ka-Bar Cutlass"].hide_render = False
+			bpy.data.objects["Weapon - Ka-Bar Cutlass Alt hold"].hide_render = True
+			bpy.data.objects["Weapon - Ka-Bar Cutlass"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - KCB Knife"].hide_render = False
+			bpy.data.objects["Weapon - KCB Knife Alt hold"].hide_render = True
+			bpy.data.objects["Weapon - KCB Knife"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Box Knife"].hide_render = False
+			bpy.data.objects["Weapon - Box Knife Alt hold"].hide_render = True
+			bpy.data.objects["Weapon - Box Knife"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["Weapon - Umbrella"].hide_render = False
+			bpy.data.objects["Weapon - Umbrella Alt hold"].hide_render = True
+			bpy.data.objects["Weapon - Umbrella"].animation_data.action = bpy.data.actions.get(currentAction)
+
+		for j in range(1,10):
+			helpers.disablePropRenderlayer(j)
+		for j in range(17,26):
+			helpers.disablePropRenderlayer(j)
+
+	#Regular Male
+	elif renderSet == 11:
+		bpy.data.objects["Hat - Altyn"].hide_render = True
+		bpy.data.objects["Hat - Ushanka"].hide_render = True
+		bpy.data.objects["Hat - US Officer Cap"].hide_render = True
+		bpy.data.objects["Hat - Soviet Officer Cap"].hide_render = True
+		bpy.data.objects["Hat - Russian Cap"].hide_render = True
+		bpy.data.objects["Hat - SWAT Helmet"].hide_render = True
+		bpy.data.objects["Hat - Steel Helmet"].hide_render = True
+		bpy.data.objects["Face - Goggles"].hide_render = True
+		bpy.data.objects["Vest - Dyneema"].hide_render = True
+		bpy.data.objects["Hat - Twaron Helmet"].hide_render = True
+		bpy.data.objects["Hat - Dyneema Helmet"].hide_render = True
+		bpy.data.objects["Hat - Spectra Helmet"].hide_render = True
+		bpy.data.objects["Vest - Flak Vest"].hide_render = True
+		bpy.data.objects["Vest - Twaron"].hide_render = True
+		bpy.data.objects["Hat - Kevlar Helmet"].hide_render = True
+		bpy.data.objects["Hat - Black Cap"].hide_render = True
+		bpy.data.objects["Vest - Guardian"].hide_render = True
+		bpy.data.objects["Backpack - Big Radio Set"].hide_render = True
+		bpy.data.objects["Face - Extended Ear"].hide_render = True
+		bpy.data.objects["Vest - SWAT Vest 2"].hide_render = False
+		bpy.data.objects["Combat Pack - Combat Pack"].hide_render = True
+		bpy.data.objects["Combat Pack - Medium Radio Set 2"].hide_render = True
+		#bpy.data.objects["Combat Pack - Combat Pack 2"].hide_render = True
+		#bpy.data.objects["Combat Pack - Combat Pack 3"].hide_render = True
+		bpy.data.objects["Legs - SWAT Leggings"].hide_render = False
+
+		for j in range(1,20):
+			helpers.disablePropRenderlayer(j)
+		for j in range(21,25):
+			helpers.disablePropRenderlayer(j)
+
+	#Big Male
+	elif renderSet == 12:
+		bpy.data.objects["Hat - Altyn"].hide_render = True
+		bpy.data.objects["Hat - Ushanka"].hide_render = True
+		bpy.data.objects["Hat - US Officer Cap - BGM"].hide_render = True
+		bpy.data.objects["Hat - Soviet Officer Cap - BGM"].hide_render = True
+		bpy.data.objects["Hat - Russian Cap"].hide_render = True
+		bpy.data.objects["Hat - SWAT Helmet"].hide_render = True
+		bpy.data.objects["Hat - Steel Helmet"].hide_render = True
+		bpy.data.objects["Face - Goggles"].hide_render = True
+		bpy.data.objects["Vest - Dyneema - BGM"].hide_render = True
+		bpy.data.objects["Hat - Twaron Helmet"].hide_render = True
+		bpy.data.objects["Hat - Dyneema Helmet"].hide_render = True
+		bpy.data.objects["Hat - Spectra Helmet"].hide_render = True
+		bpy.data.objects["Vest - Flak Vest - BGM"].hide_render = True
+		bpy.data.objects["Vest - Twaron - BGM"].hide_render = True
+		bpy.data.objects["Hat - Kevlar Helmet"].hide_render = True
+		bpy.data.objects["Hat - Black Cap"].hide_render = True
+		bpy.data.objects["Vest - Guardian - BGM"].hide_render = True
+		bpy.data.objects["Backpack - Big Radio Set"].hide_render = True
+		bpy.data.objects["Face - Extended Ear"].hide_render = True
+		bpy.data.objects["Vest - SWAT Vest 2 - BGM"].hide_render = False
+		bpy.data.objects["Combat Pack - Combat Pack"].hide_render = True
+		bpy.data.objects["Combat Pack - Medium Radio Set 2"].hide_render = True
+		#bpy.data.objects["Combat Pack - Combat Pack 2"].hide_render = True
+		#bpy.data.objects["Combat Pack - Combat Pack 3"].hide_render = True
+		bpy.data.objects["Legs - SWAT Leggings - BGM"].hide_render = False
+
+		for j in range(1,20):
+			helpers.disablePropRenderlayer(j)
+		for j in range(21,25):
+			helpers.disablePropRenderlayer(j)
+
+	#Female
+	elif renderSet == 13:
+		bpy.data.objects["Hat - Altyn - Female"].hide_render = True
+		bpy.data.objects["Hat - Ushanka - Female"].hide_render = True
+		bpy.data.objects["Hat - US Officer Cap - Female"].hide_render = True
+		bpy.data.objects["Hat - Soviet Officer Cap - Female"].hide_render = True
+		bpy.data.objects["Hat - Russian Cap - Female"].hide_render = True
+		bpy.data.objects["Hat - SWAT Helmet - Female"].hide_render = True
+		bpy.data.objects["Hat - Steel Helmet - Female"].hide_render = True
+		bpy.data.objects["Face - Goggles - Female"].hide_render = True
+		bpy.data.objects["Vest - Dyneema - Female"].hide_render = True
+		bpy.data.objects["Hat - Twaron Helmet"].hide_render = True
+		bpy.data.objects["Hat - Dyneema Helmet - Female"].hide_render = True
+		bpy.data.objects["Hat - Spectra Helmet - Female"].hide_render = True
+		bpy.data.objects["Vest - Flak Vest - Female"].hide_render = True
+		bpy.data.objects["Vest - Twaron - Female"].hide_render = True
+		bpy.data.objects["Hat - Kevlar Helmet - Female"].hide_render = True
+		bpy.data.objects["Hat - Black Cap - Female"].hide_render = True
+		bpy.data.objects["Vest - Guardian - Female"].hide_render = True
+		bpy.data.objects["Backpack - Big Radio Set"].hide_render = True
+		bpy.data.objects["Face - Extended Ear - Female"].hide_render = True
+		bpy.data.objects["Vest - SWAT Vest 2 - Female"].hide_render = False
+		bpy.data.objects["Combat Pack - Combat Pack"].hide_render = True
+		bpy.data.objects["Combat Pack - Medium Radio Set 2"].hide_render = True
+		#bpy.data.objects["Combat Pack - Combat Pack 2"].hide_render = True
+		#bpy.data.objects["Combat Pack - Combat Pack 3"].hide_render = True
+		bpy.data.objects["Legs - SWAT Leggings - Female"].hide_render = False
+
+		for j in range(1,20):
+			helpers.disablePropRenderlayer(j)
+		for j in range(21,25):
+			helpers.disablePropRenderlayer(j)
+
+	#Regular Male
+	elif renderSet == 14:
+		#bpy.data.objects["Legs - Spectra Armor Plates 2"].hide_render = True
+		bpy.data.objects["Legs - Spectra Leggings 2"].hide_render = False
+		#bpy.data.objects["Legs - Kevlar Armor Plates 2"].hide_render = False
+		bpy.data.objects["Legs - Kevlar Leggings 2"].hide_render = False
+		#bpy.data.objects["Legs - Twaron Armor Plates 2"].hide_render = False
+		bpy.data.objects["Legs - Twaron Leggings 2"].hide_render = False
+		#bpy.data.objects["Legs - Dyneema Armor Plates 2"].hide_render = False
+		bpy.data.objects["Legs - Dyneema Leggings 2"].hide_render = False
+		bpy.data.objects["Vest - Dress Uniform"].hide_render = True
+		bpy.data.objects["Legs - Dress Uniform Pants"].hide_render = True
+		bpy.data.objects["Vest - Zylon Vest"].hide_render = True
+		bpy.data.objects["Legs - Zylon Pants"].hide_render = True
+		bpy.data.objects["Vest - SWAT Vest 2"].hide_render = True
+		bpy.data.objects["Legs - SWAT Leggings"].hide_render = True
+
+		for j in range(5,26):
+			helpers.disablePropRenderlayer(j)
+
+	#Big Male
+	elif renderSet == 15:
+		#bpy.data.objects["Legs - Spectra Armor Plates 2 - BGM"].hide_render = True
+		bpy.data.objects["Legs - Spectra Leggings 2 - BGM"].hide_render = False
+		#bpy.data.objects["Legs - Kevlar Armor Plates 2 - BGM"].hide_render = False
+		bpy.data.objects["Legs - Kevlar Leggings 2 - BGM"].hide_render = False
+		#bpy.data.objects["Legs - Twaron Armor Plates 2 - BGM"].hide_render = False
+		bpy.data.objects["Legs - Twaron Leggings 2 - BGM"].hide_render = False
+		#bpy.data.objects["Legs - Dyneema Armor Plates 2 - BGM"].hide_render = False
+		bpy.data.objects["Legs - Dyneema Leggings 2 - BGM"].hide_render = False
+		bpy.data.objects["Vest - Dress Uniform - BGM"].hide_render = True
+		bpy.data.objects["Legs - Dress Uniform Pants - BGM"].hide_render = True
+		bpy.data.objects["Vest - Zylon Vest - BGM"].hide_render = True
+		bpy.data.objects["Legs - Zylon Pants - BGM"].hide_render = True
+		bpy.data.objects["Vest - SWAT Vest 2 - BGM"].hide_render = True
+		bpy.data.objects["Legs - SWAT Leggings - BGM"].hide_render = True
+
+		for j in range(5,26):
+			helpers.disablePropRenderlayer(j)
+
+	#Female
+	elif renderSet == 16:
+		#bpy.data.objects["Legs - Spectra Armor Plates 2 - Female"].hide_render = True
+		bpy.data.objects["Legs - Spectra Leggings 2 - Female"].hide_render = False
+		#bpy.data.objects["Legs - Kevlar Armor Plates 2 - Female"].hide_render = False
+		bpy.data.objects["Legs - Kevlar Leggings 2 - Female"].hide_render = False
+		#bpy.data.objects["Legs - Twaron Armor Plates 2 - Female"].hide_render = False
+		bpy.data.objects["Legs - Twaron Leggings 2 - Female"].hide_render = False
+		#bpy.data.objects["Legs - Dyneema Armor Plates 2 - Female"].hide_render = False
+		bpy.data.objects["Legs - Dyneema Leggings 2 - Female"].hide_render = False
+		bpy.data.objects["Vest - Dress Uniform - Female"].hide_render = True
+		bpy.data.objects["Legs - Dress Uniform Pants - Female"].hide_render = True
+		bpy.data.objects["Vest - Zylon Vest - Female"].hide_render = True
+		bpy.data.objects["Legs - Zylon Pants - Female"].hide_render = True
+		bpy.data.objects["Vest - SWAT Vest 2 - Female"].hide_render = True
+		bpy.data.objects["Legs - SWAT Leggings - Female"].hide_render = True
+
+		for j in range(5,26):
+			helpers.disablePropRenderlayer(j)
+
+	#Gear rework
+	elif renderSet == 17:
+		bpy.data.objects["Face - NVG 1"].hide_render = False
+		bpy.data.objects["Face - NVG 3"].hide_render = False
+		bpy.data.objects["Face - NVG 4"].hide_render = False
+
+		for j in range(4,26):
+			helpers.disablePropRenderlayer(j)
+
+	elif renderSet == 18:
+		bpy.data.objects["Weapon - M1911"].hide_render = False
+		bpy.data.objects["Weapon - M1911 - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - VZ61 MP"].hide_render = False
+		bpy.data.objects["Weapon - VZ61 MP - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Revolver"].hide_render = False
+		bpy.data.objects["Weapon - Revolver - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Contender"].hide_render = False
+		bpy.data.objects["Weapon - Contender - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Calico"].hide_render = False
+		bpy.data.objects["Weapon - Calico - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - CMMG"].hide_render = False
+		bpy.data.objects["Weapon - CMMG - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - OA93"].hide_render = False
+		bpy.data.objects["Weapon - OA93 - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Shorty"].hide_render = False
+		bpy.data.objects["Weapon - Shorty - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - MP7 MP"].hide_render = False
+		bpy.data.objects["Weapon - MP7 MP - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Ingram M10 MP"].hide_render = False
+		bpy.data.objects["Weapon - Ingram M10 MP - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - SR2 Veresk MP"].hide_render = False
+		bpy.data.objects["Weapon - SR2 Veresk MP - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Micro Uzi MP"].hide_render = False
+		bpy.data.objects["Weapon - Micro Uzi MP - Left Hand"].hide_render = False
+		# Display muzzleflashes only in relevant animations
+		if currentAction in dualPistolActions:
+			leftMuzzleFlashAction = "Dual Pistols - Aim & Shoot - Left Muzzleflash"
+			if currentAction == "Prone - Dual Pistol - Shoot":
+				leftMuzzleFlashAction = "Prone - Dual Pistol - Shoot - Left Muzzleflash"
+			bpy.data.objects["MuzzleFlash - M1911"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M1911 - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - VZ61 MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - VZ61 MP - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Revolver"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Revolver - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Contender"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Contender - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Calico"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Calico - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - CMMG"].hide_render = False
+			bpy.data.objects["MuzzleFlash - CMMG - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - OA93"].hide_render = False
+			bpy.data.objects["MuzzleFlash - OA93 - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Shorty"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Shorty - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - MP7 MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - MP7 MP - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Ingram M10 MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Ingram M10 MP - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - SR2 Veresk MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - SR2 Veresk MP - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Micro Uzi MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Micro Uzi MP - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M1911"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - M1911 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - VZ61 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - VZ61 MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Revolver"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Revolver - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Contender"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Contender - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Calico"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Calico - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - CMMG"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - CMMG - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - OA93"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - OA93 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Shorty"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Shorty - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - MP7 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - MP7 MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Ingram M10 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Ingram M10 MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - SR2 Veresk MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - SR2 Veresk MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Micro Uzi MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Micro Uzi MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+		if currentAction in pistolActions:
+			bpy.data.objects["MuzzleFlash - M1911"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M1911"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - VZ61 MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - VZ61 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Revolver"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Revolver"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Contender"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Contender"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Calico"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Calico"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - CMMG"].hide_render = False
+			bpy.data.objects["MuzzleFlash - CMMG"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - OA93"].hide_render = False
+			bpy.data.objects["MuzzleFlash - OA93"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Shorty"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Shorty"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - MP7 MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - MP7 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Ingram M10 MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Ingram M10 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - SR2 Veresk MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - SR2 Veresk MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Micro Uzi MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Micro Uzi MP"].animation_data.action = bpy.data.actions.get(currentAction)
+
+		for j in range(25,26):
+			helpers.disablePropRenderlayer(j)
+
+	elif renderSet == 19:
+		bpy.data.objects["Weapon - Agram 2000 MP"].hide_render = False
+		bpy.data.objects["Weapon - Agram 2000 MP - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Mini SAF MP"].hide_render = False
+		bpy.data.objects["Weapon - Mini SAF MP - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - AEK919K MP"].hide_render = True
+		bpy.data.objects["Weapon - AEK919K MP - Left Hand"].hide_render = True
+		bpy.data.objects["Weapon - Stechkin MP"].hide_render = False
+		bpy.data.objects["Weapon - Stechkin MP - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - PP93 MP"].hide_render = True
+		bpy.data.objects["Weapon - PP93 MP - Left Hand"].hide_render = True
+		bpy.data.objects["Weapon - TMP MP"].hide_render = True
+		bpy.data.objects["Weapon - TMP MP - Left Hand"].hide_render = True
+		bpy.data.objects["Weapon - Automag V"].hide_render = True
+		bpy.data.objects["Weapon - Automag V - Left Hand"].hide_render = True
+		bpy.data.objects["Weapon - Makarov"].hide_render = False
+		bpy.data.objects["Weapon - Makarov - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Mini Uzi MP"].hide_render = False
+		bpy.data.objects["Weapon - Mini Uzi MP - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - 93R"].hide_render = False
+		bpy.data.objects["Weapon - 93R - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Wildey"].hide_render = False
+		bpy.data.objects["Weapon - Wildey - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Mk23"].hide_render = False
+		bpy.data.objects["Weapon - Mk23 - Left Hand"].hide_render = False
+		# Display muzzleflashes only in relevant animations
+		if currentAction in dualPistolActions:
+			leftMuzzleFlashAction = "Dual Pistols - Aim & Shoot - Left Muzzleflash"
+			if currentAction == "Prone - Dual Pistol - Shoot":
+				leftMuzzleFlashAction = "Prone - Dual Pistol - Shoot - Left Muzzleflash"
+			bpy.data.objects["MuzzleFlash - Agram 2000 MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Agram 2000 MP - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Mini SAF MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Mini SAF MP - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - AEK919K MP"].hide_render = True
+			bpy.data.objects["MuzzleFlash - AEK919K MP - Left Hand"].hide_render = True
+			bpy.data.objects["MuzzleFlash - Stechkin MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Stechkin MP - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - PP93 MP"].hide_render = True
+			bpy.data.objects["MuzzleFlash - PP93 MP - Left Hand"].hide_render = True
+			bpy.data.objects["MuzzleFlash - TMP MP"].hide_render = True
+			bpy.data.objects["MuzzleFlash - TMP MP - Left Hand"].hide_render = True
+			bpy.data.objects["MuzzleFlash - Automag V"].hide_render = True
+			bpy.data.objects["MuzzleFlash - Automag V - Left Hand"].hide_render = True
+			bpy.data.objects["MuzzleFlash - Makarov"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Makarov - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Mini Uzi MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Mini Uzi MP - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - 93R"].hide_render = False
+			bpy.data.objects["MuzzleFlash - 93R - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Wildey"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Wildey - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Mk23"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Mk23 - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Agram 2000 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Agram 2000 MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Mini SAF MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Mini SAF MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - AEK919K MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - AEK919K MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Stechkin MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Stechkin MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - PP93 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - PP93 MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - TMP MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - TMP MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Automag V"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Automag V - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Makarov"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Makarov - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Mini Uzi MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Mini Uzi MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - 93R"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - 93R - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Wildey"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Wildey - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Mk23"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Mk23 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+		if currentAction in pistolActions:
+			bpy.data.objects["MuzzleFlash - Agram 2000 MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Agram 2000 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Mini SAF MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Mini SAF MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - AEK919K MP"].hide_render = True
+			bpy.data.objects["MuzzleFlash - AEK919K MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Stechkin MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Stechkin MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - PP93 MP"].hide_render = True
+			bpy.data.objects["MuzzleFlash - PP93 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - TMP MP"].hide_render = True
+			bpy.data.objects["MuzzleFlash - TMP MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Automag V"].hide_render = True
+			bpy.data.objects["MuzzleFlash - Automag V"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Makarov"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Makarov"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Mini Uzi MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Mini Uzi MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - 93R"].hide_render = False
+			bpy.data.objects["MuzzleFlash - 93R"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Wildey"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Wildey"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Mk23"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Mk23"].animation_data.action = bpy.data.actions.get(currentAction)
+
+		for j in range(5,7):
+			helpers.disablePropRenderlayer(j)
+		for j in range(9,15):
+			helpers.disablePropRenderlayer(j)
+		for j in range(25,26):
+			helpers.disablePropRenderlayer(j)
+
+	elif renderSet == 20:
+		bpy.data.objects["Weapon - VZ82 MP"].hide_render = False
+		bpy.data.objects["Weapon - VZ82 MP - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Hi-Power"].hide_render = False
+		bpy.data.objects["Weapon - Hi-Power - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - 38 Special"].hide_render = False
+		bpy.data.objects["Weapon - 38 Special - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - P226 Light"].hide_render = False
+		bpy.data.objects["Weapon - P226 Light - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Luger"].hide_render = False
+		bpy.data.objects["Weapon - Luger - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - M29"].hide_render = False
+		bpy.data.objects["Weapon - M29 - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Python"].hide_render = False
+		bpy.data.objects["Weapon - Python - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - G11 PDW"].hide_render = False
+		bpy.data.objects["Weapon - G11 PDW - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - FiveSeven"].hide_render = False
+		bpy.data.objects["Weapon - FiveSeven - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Dart Gun"].hide_render = False
+		bpy.data.objects["Weapon - Dart Gun - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - P226 SAS"].hide_render = False
+		bpy.data.objects["Weapon - P226 SAS - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - M1911 High Cap"].hide_render = False
+		bpy.data.objects["Weapon - M1911 High Cap - Left Hand"].hide_render = False
+		# Display muzzleflashes only in relevant animations
+		if currentAction in dualPistolActions:
+			leftMuzzleFlashAction = "Dual Pistols - Aim & Shoot - Left Muzzleflash"
+			if currentAction == "Prone - Dual Pistol - Shoot":
+				leftMuzzleFlashAction = "Prone - Dual Pistol - Shoot - Left Muzzleflash"
+			bpy.data.objects["MuzzleFlash - VZ82 MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - VZ82 MP - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Hi-Power"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Hi-Power - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - 38 Special"].hide_render = False
+			bpy.data.objects["MuzzleFlash - 38 Special - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P226 Light"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P226 Light - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Luger"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Luger - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M29"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M29 - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Python"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Python - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - G11 PDW"].hide_render = False
+			bpy.data.objects["MuzzleFlash - G11 PDW - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - FiveSeven"].hide_render = False
+			bpy.data.objects["MuzzleFlash - FiveSeven - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P226 SAS"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P226 SAS - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M1911 High Cap"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M1911 High Cap - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - VZ82 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - VZ82 MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Hi-Power"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Hi-Power - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - 38 Special"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - 38 Special - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - P226 Light"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - P226 Light - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Luger"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Luger - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - M29"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - M29 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Python"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Python - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - G11 PDW"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - G11 PDW - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - FiveSeven"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - FiveSeven - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - P226 SAS"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - P226 SAS - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - M1911 High Cap"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - M1911 High Cap - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+		if currentAction in pistolActions:
+			bpy.data.objects["MuzzleFlash - VZ82 MP"].hide_render = False
+			bpy.data.objects["MuzzleFlash - VZ82 MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Hi-Power"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Hi-Power"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - 38 Special"].hide_render = False
+			bpy.data.objects["MuzzleFlash - 38 Special"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - P226 Light"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P226 Light"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Luger"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Luger"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - M29"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M29"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Python"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Python"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - G11 PDW"].hide_render = False
+			bpy.data.objects["MuzzleFlash - G11 PDW"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - FiveSeven"].hide_render = False
+			bpy.data.objects["MuzzleFlash - FiveSeven"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - P226 SAS"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P226 SAS"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - M1911 High Cap"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M1911 High Cap"].animation_data.action = bpy.data.actions.get(currentAction)
+
+		for j in range(25,26):
+			helpers.disablePropRenderlayer(j)
+
+	elif renderSet == 21:
+		bpy.data.objects["Weapon - Automag III"].hide_render = False
+		bpy.data.objects["Weapon - Automag III - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Tokarev"].hide_render = False
+		bpy.data.objects["Weapon - Tokarev - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - M29 SATAN"].hide_render = False
+		bpy.data.objects["Weapon - M29 SATAN - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Anaconda"].hide_render = False
+		bpy.data.objects["Weapon - Anaconda - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - MR96"].hide_render = False
+		bpy.data.objects["Weapon - MR96 - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - P226"].hide_render = False
+		bpy.data.objects["Weapon - P226 - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Desert Eagle 44"].hide_render = False
+		bpy.data.objects["Weapon - Desert Eagle 44 - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Desert Eagle 357"].hide_render = False
+		bpy.data.objects["Weapon - Desert Eagle 357 - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Gyurza"].hide_render = False
+		bpy.data.objects["Weapon - Gyurza - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Ruger SR9"].hide_render = False
+		bpy.data.objects["Weapon - Ruger SR9 - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Beretta M9"].hide_render = False
+		bpy.data.objects["Weapon - Beretta M9 - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - EMF Hartford"].hide_render = False
+		bpy.data.objects["Weapon - EMF Hartford - Left Hand"].hide_render = False
+		# Display muzzleflashes only in relevant animations
+		if currentAction in dualPistolActions:
+			leftMuzzleFlashAction = "Dual Pistols - Aim & Shoot - Left Muzzleflash"
+			if currentAction == "Prone - Dual Pistol - Shoot":
+				leftMuzzleFlashAction = "Prone - Dual Pistol - Shoot - Left Muzzleflash"
+			bpy.data.objects["MuzzleFlash - Automag III"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Automag III - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Tokarev"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Tokarev - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M29 SATAN"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M29 SATAN - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Anaconda"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Anaconda - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - MR96"].hide_render = False
+			bpy.data.objects["MuzzleFlash - MR96 - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P226"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P226 - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Desert Eagle 44"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Desert Eagle 44 - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Desert Eagle 357"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Desert Eagle 357 - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Gyurza"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Gyurza - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Ruger SR9"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Ruger SR9 - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Beretta M9"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Beretta M9 - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - EMF Hartford"].hide_render = False
+			bpy.data.objects["MuzzleFlash - EMF Hartford - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Automag III"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Automag III - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Tokarev"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Tokarev - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - M29 SATAN"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - M29 SATAN - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Anaconda"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Anaconda - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - MR96"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - MR96 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - P226"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - P226 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Desert Eagle 44"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Desert Eagle 44 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Desert Eagle 357"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Desert Eagle 357 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Gyurza"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Gyurza - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Ruger SR9"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Ruger SR9 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Beretta M9"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Beretta M9 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - EMF Hartford"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - EMF Hartford - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+		if currentAction in pistolActions:
+			bpy.data.objects["MuzzleFlash - Automag III"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Automag III"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Tokarev"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Tokarev"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - M29 SATAN"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M29 SATAN"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Anaconda"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Anaconda"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - MR96"].hide_render = False
+			bpy.data.objects["MuzzleFlash - MR96"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - P226"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P226"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Desert Eagle 44"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Desert Eagle 44"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Desert Eagle 357"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Desert Eagle 357"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Gyurza"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Gyurza"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Ruger SR9"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Ruger SR9"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Beretta M9"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Beretta M9"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - EMF Hartford"].hide_render = False
+			bpy.data.objects["MuzzleFlash - EMF Hartford"].animation_data.action = bpy.data.actions.get(currentAction)
+
+		for j in range(25,26):
+			helpers.disablePropRenderlayer(j)
+
+	elif renderSet == 22:
+		bpy.data.objects["Weapon - M83 Premier Grade"].hide_render = False
+		bpy.data.objects["Weapon - M83 Premier Grade - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Redhawk"].hide_render = False
+		bpy.data.objects["Weapon - Redhawk - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Super Redhawk Alaskan"].hide_render = False
+		bpy.data.objects["Weapon - Super Redhawk Alaskan - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Delta Elite"].hide_render = False
+		bpy.data.objects["Weapon - Delta Elite - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Kimber Eclipse"].hide_render = False
+		bpy.data.objects["Weapon - Kimber Eclipse - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - LAR Grizzly"].hide_render = False
+		bpy.data.objects["Weapon - LAR Grizzly - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - P7M8"].hide_render = False
+		bpy.data.objects["Weapon - P7M8 - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - AK Pistol"].hide_render = False
+		bpy.data.objects["Weapon - AK Pistol - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Pepper Spray"].hide_render = False
+		bpy.data.objects["Weapon - Pepper Spray - Left Hand"].hide_render = False
+		bpy.data.objects["Weapon - Jatimatic MP"].hide_render = True
+		bpy.data.objects["Weapon - Jatimatic MP - Left Hand"].hide_render = True
+		# Display muzzleflashes only in relevant animations
+		if currentAction in dualPistolActions:
+			leftMuzzleFlashAction = "Dual Pistols - Aim & Shoot - Left Muzzleflash"
+			if currentAction == "Prone - Dual Pistol - Shoot":
+				leftMuzzleFlashAction = "Prone - Dual Pistol - Shoot - Left Muzzleflash"
+			bpy.data.objects["MuzzleFlash - M83 Premier Grade"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M83 Premier Grade - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Redhawk"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Redhawk - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Super Redhawk Alaskan"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Super Redhawk Alaskan - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Delta Elite"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Delta Elite - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Kimber Eclipse"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Kimber Eclipse - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - LAR Grizzly"].hide_render = False
+			bpy.data.objects["MuzzleFlash - LAR Grizzly - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P7M8"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P7M8 - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - AK Pistol"].hide_render = False
+			bpy.data.objects["MuzzleFlash - AK Pistol - Left Hand"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Jatimatic MP"].hide_render = True
+			bpy.data.objects["MuzzleFlash - Jatimatic MP - Left Hand"].hide_render = True
+			bpy.data.objects["MuzzleFlash - M83 Premier Grade"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - M83 Premier Grade - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Redhawk"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Redhawk - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Super Redhawk Alaskan"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Super Redhawk Alaskan - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Delta Elite"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Delta Elite - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Kimber Eclipse"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Kimber Eclipse - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - LAR Grizzly"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - LAR Grizzly - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - P7M8"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - P7M8 - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - AK Pistol"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - AK Pistol - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+			bpy.data.objects["MuzzleFlash - Jatimatic MP"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Jatimatic MP - Left Hand"].animation_data.action = bpy.data.actions.get(leftMuzzleFlashAction)
+		if currentAction in pistolActions:
+			bpy.data.objects["MuzzleFlash - M83 Premier Grade"].hide_render = False
+			bpy.data.objects["MuzzleFlash - M83 Premier Grade"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Redhawk"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Redhawk"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Super Redhawk Alaskan"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Super Redhawk Alaskan"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Delta Elite"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Delta Elite"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Kimber Eclipse"].hide_render = False
+			bpy.data.objects["MuzzleFlash - Kimber Eclipse"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - LAR Grizzly"].hide_render = False
+			bpy.data.objects["MuzzleFlash - LAR Grizzly"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - P7M8"].hide_render = False
+			bpy.data.objects["MuzzleFlash - P7M8"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - AK Pistol"].hide_render = False
+			bpy.data.objects["MuzzleFlash - AK Pistol"].animation_data.action = bpy.data.actions.get(currentAction)
+			bpy.data.objects["MuzzleFlash - Jatimatic MP"].hide_render = True
+			bpy.data.objects["MuzzleFlash - Jatimatic MP"].animation_data.action = bpy.data.actions.get(currentAction)
+
+		for j in range(19,26):
+			helpers.disablePropRenderlayer(j)
+
+	elif renderSet == 23:
+		bpy.data.objects["Weapon - Shotgun"].hide_render = False
+		bpy.data.objects["Weapon - SPAS12"].hide_render = False
+
+		for j in range(1,15):
+			helpers.disablePropRenderlayer(j)
+		for j in range(16,17):
+			helpers.disablePropRenderlayer(j)
+		for j in range(18,26):
+			helpers.disablePropRenderlayer(j)
 
 	# RENDER AWAYYY!
 	bpy.ops.render.render(animation=True)

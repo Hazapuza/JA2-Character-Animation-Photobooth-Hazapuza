@@ -1,0 +1,26 @@
+; :: separator, palette filename, prefix, suffix
+;------------------------------------------------------
+guns_universal_v2.stp :: Prop1 :: _M1911
+guns_universal_v2.stp :: Prop2 :: _lM1911
+guns_universal_v2.stp :: Prop3 :: _VZ61MP
+guns_universal_v2.stp :: Prop4 :: _lVZ61MP
+guns_universal_v2.stp :: Prop5 :: _REVOLVER
+guns_universal_v2.stp :: Prop6 :: _lREVOLVER
+guns_universal_v2.stp :: Prop7 :: _CONTENDER
+guns_universal_v2.stp :: Prop8 :: _lCONTENDER
+guns_universal_v2.stp :: Prop9 :: _CALICO
+guns_universal_v2.stp :: Prop10 :: _lCALICO
+guns_universal_v2.stp :: Prop11 :: _CMMG
+guns_universal_v2.stp :: Prop12 :: _lCMMG
+guns_universal_v2.stp :: Prop13 :: _OA93
+guns_universal_v2.stp :: Prop14 :: _lOA93
+guns_universal_v2.stp :: Prop15 :: _SHORTY
+guns_universal_v2.stp :: Prop16 :: _lSHORTY
+guns_universal_v2.stp :: Prop17 :: _MP7MP
+guns_universal_v2.stp :: Prop18 :: _lMP7MP
+guns_universal_v2.stp :: Prop19 :: _M10MP
+guns_universal_v2.stp :: Prop20 :: _lM10MP
+guns_universal_v2.stp :: Prop21 :: _VERESKMP
+guns_universal_v2.stp :: Prop22 :: _lVERESKMP
+guns_universal_v2.stp :: Prop23 :: _MICROUZI
+guns_universal_v2.stp :: Prop24 :: _lMICROUZI

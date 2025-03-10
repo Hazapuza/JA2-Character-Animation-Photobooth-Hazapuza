@@ -1,4 +1,4 @@
-# JA2-Character-Animation-Photobooth
+# JA2-Character-Animation-Photobooth, forked by Hazapuza
 Blender framework meant for creating new animations to JA2
 Extract make_script.7z and JA2 2.9_033.blend.7z to the project folder for needed files and programs.
 

@@ -9,7 +9,7 @@ for j in range(1,26):
 
 objectList = [
 	"Weapon", "Vest", "Backpack", "Hat",
-	"Face", "Legs", "Body", "Item", "Helmet"
+	"Face", "Legs", "Body", "Item", "Helmet", "Ghillie"
 ]
 
 rifleActions = [
@@ -164,7 +164,7 @@ for i in range(len(animationArray)):
 
 
 	# Display props in renders depending on the set
-	renderSet = 23
+	renderSet = 17
 	if renderSet == 0:
 		# Do not render props
 		for j in range(1,26):
@@ -667,165 +667,215 @@ for i in range(len(animationArray)):
 
 	#Regular Male
 	elif renderSet == 11:
-		bpy.data.objects["Hat - Altyn"].hide_render = True
-		bpy.data.objects["Hat - Ushanka"].hide_render = True
-		bpy.data.objects["Hat - US Officer Cap"].hide_render = True
-		bpy.data.objects["Hat - Soviet Officer Cap"].hide_render = True
-		bpy.data.objects["Hat - Russian Cap"].hide_render = True
-		bpy.data.objects["Hat - SWAT Helmet"].hide_render = True
-		bpy.data.objects["Hat - Steel Helmet"].hide_render = True
-		bpy.data.objects["Face - Goggles"].hide_render = True
-		bpy.data.objects["Vest - Dyneema"].hide_render = True
-		bpy.data.objects["Hat - Twaron Helmet"].hide_render = True
-		bpy.data.objects["Hat - Dyneema Helmet"].hide_render = True
-		bpy.data.objects["Hat - Spectra Helmet"].hide_render = True
-		bpy.data.objects["Vest - Flak Vest"].hide_render = True
-		bpy.data.objects["Vest - Twaron"].hide_render = True
-		bpy.data.objects["Hat - Kevlar Helmet"].hide_render = True
-		bpy.data.objects["Hat - Black Cap"].hide_render = True
-		bpy.data.objects["Vest - Guardian"].hide_render = True
-		bpy.data.objects["Backpack - Big Radio Set"].hide_render = True
-		bpy.data.objects["Face - Extended Ear"].hide_render = True
+		bpy.data.objects["Hat - Altyn"].hide_render = False
+		bpy.data.objects["Hat - Ushanka"].hide_render = False
+		bpy.data.objects["Hat - US Officer Cap"].hide_render = False
+		bpy.data.objects["Hat - Soviet Officer Cap"].hide_render = False
+		bpy.data.objects["Hat - Russian Cap"].hide_render = False
+		bpy.data.objects["Hat - SWAT Helmet"].hide_render = False
+		bpy.data.objects["Hat - Steel Helmet"].hide_render = False
+		bpy.data.objects["Face - Goggles"].hide_render = False
+		bpy.data.objects["Vest - Dyneema"].hide_render = False
+		bpy.data.objects["Hat - Twaron Helmet"].hide_render = False
+		bpy.data.objects["Hat - Dyneema Helmet"].hide_render = False
+		bpy.data.objects["Hat - Spectra Helmet"].hide_render = False
+		bpy.data.objects["Vest - Flak Vest"].hide_render = False
+		bpy.data.objects["Vest - Twaron"].hide_render = False
+		bpy.data.objects["Hat - Kevlar Helmet"].hide_render = False
+		bpy.data.objects["Hat - Black Cap"].hide_render = False
+		bpy.data.objects["Vest - Guardian"].hide_render = False
+		bpy.data.objects["Backpack - Big Radio Set"].hide_render = False
+		bpy.data.objects["Face - Extended Ear"].hide_render = False
 		bpy.data.objects["Vest - SWAT Vest 2"].hide_render = False
-		bpy.data.objects["Combat Pack - Combat Pack"].hide_render = True
-		bpy.data.objects["Combat Pack - Medium Radio Set 2"].hide_render = True
-		#bpy.data.objects["Combat Pack - Combat Pack 2"].hide_render = True
-		#bpy.data.objects["Combat Pack - Combat Pack 3"].hide_render = True
+		bpy.data.objects["Backpack - Combat Pack"].hide_render = False
+		bpy.data.objects["Backpack - Combat Pack 2"].hide_render = False
+		bpy.data.objects["Backpack - Medium Radio Set"].hide_render = False
+		#Empty slot
 		bpy.data.objects["Legs - SWAT Leggings"].hide_render = False
 
-		for j in range(1,20):
-			helpers.disablePropRenderlayer(j)
-		for j in range(21,25):
+		for j in range(24,25):
 			helpers.disablePropRenderlayer(j)
 
 	#Big Male
 	elif renderSet == 12:
-		bpy.data.objects["Hat - Altyn"].hide_render = True
-		bpy.data.objects["Hat - Ushanka"].hide_render = True
-		bpy.data.objects["Hat - US Officer Cap - BGM"].hide_render = True
-		bpy.data.objects["Hat - Soviet Officer Cap - BGM"].hide_render = True
-		bpy.data.objects["Hat - Russian Cap"].hide_render = True
-		bpy.data.objects["Hat - SWAT Helmet"].hide_render = True
-		bpy.data.objects["Hat - Steel Helmet"].hide_render = True
-		bpy.data.objects["Face - Goggles"].hide_render = True
-		bpy.data.objects["Vest - Dyneema - BGM"].hide_render = True
-		bpy.data.objects["Hat - Twaron Helmet"].hide_render = True
-		bpy.data.objects["Hat - Dyneema Helmet"].hide_render = True
-		bpy.data.objects["Hat - Spectra Helmet"].hide_render = True
-		bpy.data.objects["Vest - Flak Vest - BGM"].hide_render = True
-		bpy.data.objects["Vest - Twaron - BGM"].hide_render = True
-		bpy.data.objects["Hat - Kevlar Helmet"].hide_render = True
-		bpy.data.objects["Hat - Black Cap"].hide_render = True
-		bpy.data.objects["Vest - Guardian - BGM"].hide_render = True
-		bpy.data.objects["Backpack - Big Radio Set"].hide_render = True
-		bpy.data.objects["Face - Extended Ear"].hide_render = True
+		bpy.data.objects["Hat - Altyn"].hide_render = False
+		bpy.data.objects["Hat - Ushanka"].hide_render = False
+		bpy.data.objects["Hat - US Officer Cap - BGM"].hide_render = False
+		bpy.data.objects["Hat - Soviet Officer Cap - BGM"].hide_render = False
+		bpy.data.objects["Hat - Russian Cap"].hide_render = False
+		bpy.data.objects["Hat - SWAT Helmet"].hide_render = False
+		bpy.data.objects["Hat - Steel Helmet"].hide_render = False
+		bpy.data.objects["Face - Goggles"].hide_render = False
+		bpy.data.objects["Vest - Dyneema - BGM"].hide_render = False
+		bpy.data.objects["Hat - Twaron Helmet"].hide_render = False
+		bpy.data.objects["Hat - Dyneema Helmet"].hide_render = False
+		bpy.data.objects["Hat - Spectra Helmet"].hide_render = False
+		bpy.data.objects["Vest - Flak Vest - BGM"].hide_render = False
+		bpy.data.objects["Vest - Twaron - BGM"].hide_render = False
+		bpy.data.objects["Hat - Kevlar Helmet"].hide_render = False
+		bpy.data.objects["Hat - Black Cap"].hide_render = False
+		bpy.data.objects["Vest - Guardian - BGM"].hide_render = False
+		bpy.data.objects["Backpack - Big Radio Set"].hide_render = False
+		bpy.data.objects["Face - Extended Ear"].hide_render = False
 		bpy.data.objects["Vest - SWAT Vest 2 - BGM"].hide_render = False
-		bpy.data.objects["Combat Pack - Combat Pack"].hide_render = True
-		bpy.data.objects["Combat Pack - Medium Radio Set 2"].hide_render = True
-		#bpy.data.objects["Combat Pack - Combat Pack 2"].hide_render = True
-		#bpy.data.objects["Combat Pack - Combat Pack 3"].hide_render = True
+		bpy.data.objects["Backpack - Combat Pack"].hide_render = False
+		bpy.data.objects["Backpack - Combat Pack 2"].hide_render = False
+		bpy.data.objects["Backpack - Medium Radio Set"].hide_render = False
+		#Empty slot
 		bpy.data.objects["Legs - SWAT Leggings - BGM"].hide_render = False
 
-		for j in range(1,20):
-			helpers.disablePropRenderlayer(j)
-		for j in range(21,25):
+		for j in range(24,25):
 			helpers.disablePropRenderlayer(j)
 
 	#Female
 	elif renderSet == 13:
-		bpy.data.objects["Hat - Altyn - Female"].hide_render = True
-		bpy.data.objects["Hat - Ushanka - Female"].hide_render = True
-		bpy.data.objects["Hat - US Officer Cap - Female"].hide_render = True
-		bpy.data.objects["Hat - Soviet Officer Cap - Female"].hide_render = True
-		bpy.data.objects["Hat - Russian Cap - Female"].hide_render = True
-		bpy.data.objects["Hat - SWAT Helmet - Female"].hide_render = True
-		bpy.data.objects["Hat - Steel Helmet - Female"].hide_render = True
-		bpy.data.objects["Face - Goggles - Female"].hide_render = True
-		bpy.data.objects["Vest - Dyneema - Female"].hide_render = True
-		bpy.data.objects["Hat - Twaron Helmet"].hide_render = True
-		bpy.data.objects["Hat - Dyneema Helmet - Female"].hide_render = True
-		bpy.data.objects["Hat - Spectra Helmet - Female"].hide_render = True
-		bpy.data.objects["Vest - Flak Vest - Female"].hide_render = True
-		bpy.data.objects["Vest - Twaron - Female"].hide_render = True
-		bpy.data.objects["Hat - Kevlar Helmet - Female"].hide_render = True
-		bpy.data.objects["Hat - Black Cap - Female"].hide_render = True
-		bpy.data.objects["Vest - Guardian - Female"].hide_render = True
-		bpy.data.objects["Backpack - Big Radio Set"].hide_render = True
-		bpy.data.objects["Face - Extended Ear - Female"].hide_render = True
+		bpy.data.objects["Hat - Altyn - Female"].hide_render = False
+		bpy.data.objects["Hat - Ushanka - Female"].hide_render = False
+		bpy.data.objects["Hat - US Officer Cap - Female"].hide_render = False
+		bpy.data.objects["Hat - Soviet Officer Cap - Female"].hide_render = False
+		bpy.data.objects["Hat - Russian Cap - Female"].hide_render = False
+		bpy.data.objects["Hat - SWAT Helmet - Female"].hide_render = False
+		bpy.data.objects["Hat - Steel Helmet - Female"].hide_render = False
+		bpy.data.objects["Face - Goggles - Female"].hide_render = False
+		bpy.data.objects["Vest - Dyneema - Female"].hide_render = False
+		bpy.data.objects["Hat - Twaron Helmet"].hide_render = False
+		bpy.data.objects["Hat - Dyneema Helmet - Female"].hide_render = False
+		bpy.data.objects["Hat - Spectra Helmet - Female"].hide_render = False
+		bpy.data.objects["Vest - Flak Vest - Female"].hide_render = False
+		bpy.data.objects["Vest - Twaron - Female"].hide_render = False
+		bpy.data.objects["Hat - Kevlar Helmet - Female"].hide_render = False
+		bpy.data.objects["Hat - Black Cap - Female"].hide_render = False
+		bpy.data.objects["Vest - Guardian - Female"].hide_render = False
+		bpy.data.objects["Backpack - Big Radio Set"].hide_render = False
+		bpy.data.objects["Face - Extended Ear - Female"].hide_render = False
 		bpy.data.objects["Vest - SWAT Vest 2 - Female"].hide_render = False
-		bpy.data.objects["Combat Pack - Combat Pack"].hide_render = True
-		bpy.data.objects["Combat Pack - Medium Radio Set 2"].hide_render = True
-		#bpy.data.objects["Combat Pack - Combat Pack 2"].hide_render = True
-		#bpy.data.objects["Combat Pack - Combat Pack 3"].hide_render = True
+		bpy.data.objects["Backpack - Combat Pack"].hide_render = False
+		bpy.data.objects["Backpack - Combat Pack 2"].hide_render = False
+		bpy.data.objects["Backpack - Medium Radio Set"].hide_render = False
+		#Empty slot
 		bpy.data.objects["Legs - SWAT Leggings - Female"].hide_render = False
 
-		for j in range(1,20):
-			helpers.disablePropRenderlayer(j)
-		for j in range(21,25):
+		for j in range(24,25):
 			helpers.disablePropRenderlayer(j)
 
 	#Regular Male
 	elif renderSet == 14:
-		#bpy.data.objects["Legs - Spectra Armor Plates 2"].hide_render = True
-		bpy.data.objects["Legs - Spectra Leggings 2"].hide_render = False
-		#bpy.data.objects["Legs - Kevlar Armor Plates 2"].hide_render = False
-		bpy.data.objects["Legs - Kevlar Leggings 2"].hide_render = False
-		#bpy.data.objects["Legs - Twaron Armor Plates 2"].hide_render = False
-		bpy.data.objects["Legs - Twaron Leggings 2"].hide_render = False
-		#bpy.data.objects["Legs - Dyneema Armor Plates 2"].hide_render = False
-		bpy.data.objects["Legs - Dyneema Leggings 2"].hide_render = False
-		bpy.data.objects["Vest - Dress Uniform"].hide_render = True
-		bpy.data.objects["Legs - Dress Uniform Pants"].hide_render = True
-		bpy.data.objects["Vest - Zylon Vest"].hide_render = True
-		bpy.data.objects["Legs - Zylon Pants"].hide_render = True
-		bpy.data.objects["Vest - SWAT Vest 2"].hide_render = True
-		bpy.data.objects["Legs - SWAT Leggings"].hide_render = True
+		bpy.data.objects["Legs - Spectra Armor Plates 2"].hide_render = False
+		#bpy.data.objects["Legs - Spectra Leggings 2"].hide_render = False
+		bpy.data.objects["Legs - Kevlar Armor Plates 2"].hide_render = False
+		#bpy.data.objects["Legs - Kevlar Leggings 2"].hide_render = False
+		bpy.data.objects["Legs - Twaron Armor Plates 2"].hide_render = False
+		#bpy.data.objects["Legs - Twaron Leggings 2"].hide_render = False
+		bpy.data.objects["Legs - Dyneema Armor Plates 2"].hide_render = False
+		#bpy.data.objects["Legs - Dyneema Leggings 2"].hide_render = False
+		bpy.data.objects["Vest - Dress Uniform"].hide_render = False
+		bpy.data.objects["Legs - Dress Uniform Pants"].hide_render = False
+		bpy.data.objects["Vest - Zylon Vest"].hide_render = False
+		bpy.data.objects["Legs - Zylon Pants"].hide_render = False
 
-		for j in range(5,26):
+		for j in range(5,6):
+			helpers.disablePropRenderlayer(j)
+		for j in range(10,26):
 			helpers.disablePropRenderlayer(j)
 
 	#Big Male
 	elif renderSet == 15:
-		#bpy.data.objects["Legs - Spectra Armor Plates 2 - BGM"].hide_render = True
-		bpy.data.objects["Legs - Spectra Leggings 2 - BGM"].hide_render = False
-		#bpy.data.objects["Legs - Kevlar Armor Plates 2 - BGM"].hide_render = False
-		bpy.data.objects["Legs - Kevlar Leggings 2 - BGM"].hide_render = False
-		#bpy.data.objects["Legs - Twaron Armor Plates 2 - BGM"].hide_render = False
-		bpy.data.objects["Legs - Twaron Leggings 2 - BGM"].hide_render = False
-		#bpy.data.objects["Legs - Dyneema Armor Plates 2 - BGM"].hide_render = False
-		bpy.data.objects["Legs - Dyneema Leggings 2 - BGM"].hide_render = False
-		bpy.data.objects["Vest - Dress Uniform - BGM"].hide_render = True
-		bpy.data.objects["Legs - Dress Uniform Pants - BGM"].hide_render = True
-		bpy.data.objects["Vest - Zylon Vest - BGM"].hide_render = True
-		bpy.data.objects["Legs - Zylon Pants - BGM"].hide_render = True
-		bpy.data.objects["Vest - SWAT Vest 2 - BGM"].hide_render = True
-		bpy.data.objects["Legs - SWAT Leggings - BGM"].hide_render = True
+		bpy.data.objects["Legs - Spectra Armor Plates 2 - BGM"].hide_render = False
+		#bpy.data.objects["Legs - Spectra Leggings 2 - BGM"].hide_render = False
+		bpy.data.objects["Legs - Kevlar Armor Plates 2 - BGM"].hide_render = False
+		#bpy.data.objects["Legs - Kevlar Leggings 2 - BGM"].hide_render = False
+		bpy.data.objects["Legs - Twaron Armor Plates 2 - BGM"].hide_render = False
+		#bpy.data.objects["Legs - Twaron Leggings 2 - BGM"].hide_render = False
+		bpy.data.objects["Legs - Dyneema Armor Plates 2 - BGM"].hide_render = False
+		#bpy.data.objects["Legs - Dyneema Leggings 2 - BGM"].hide_render = False
+		bpy.data.objects["Vest - Dress Uniform - BGM"].hide_render = False
+		bpy.data.objects["Legs - Dress Uniform Pants - BGM"].hide_render = False
+		bpy.data.objects["Vest - Zylon Vest - BGM"].hide_render = False
+		bpy.data.objects["Legs - Zylon Pants - BGM"].hide_render = False
 
-		for j in range(5,26):
+		for j in range(5,6):
+			helpers.disablePropRenderlayer(j)
+		for j in range(10,26):
 			helpers.disablePropRenderlayer(j)
 
 	#Female
 	elif renderSet == 16:
-		#bpy.data.objects["Legs - Spectra Armor Plates 2 - Female"].hide_render = True
-		bpy.data.objects["Legs - Spectra Leggings 2 - Female"].hide_render = False
-		#bpy.data.objects["Legs - Kevlar Armor Plates 2 - Female"].hide_render = False
-		bpy.data.objects["Legs - Kevlar Leggings 2 - Female"].hide_render = False
-		#bpy.data.objects["Legs - Twaron Armor Plates 2 - Female"].hide_render = False
-		bpy.data.objects["Legs - Twaron Leggings 2 - Female"].hide_render = False
-		#bpy.data.objects["Legs - Dyneema Armor Plates 2 - Female"].hide_render = False
-		bpy.data.objects["Legs - Dyneema Leggings 2 - Female"].hide_render = False
-		bpy.data.objects["Vest - Dress Uniform - Female"].hide_render = True
-		bpy.data.objects["Legs - Dress Uniform Pants - Female"].hide_render = True
-		bpy.data.objects["Vest - Zylon Vest - Female"].hide_render = True
-		bpy.data.objects["Legs - Zylon Pants - Female"].hide_render = True
-		bpy.data.objects["Vest - SWAT Vest 2 - Female"].hide_render = True
-		bpy.data.objects["Legs - SWAT Leggings - Female"].hide_render = True
+		bpy.data.objects["Legs - Spectra Armor Plates 2 - Female"].hide_render = False
+		#bpy.data.objects["Legs - Spectra Leggings 2 - Female"].hide_render = False
+		bpy.data.objects["Legs - Kevlar Armor Plates 2 - Female"].hide_render = False
+		#bpy.data.objects["Legs - Kevlar Leggings 2 - Female"].hide_render = False
+		bpy.data.objects["Legs - Twaron Armor Plates 2 - Female"].hide_render = False
+		#bpy.data.objects["Legs - Twaron Leggings 2 - Female"].hide_render = False
+		bpy.data.objects["Legs - Dyneema Armor Plates 2 - Female"].hide_render = False
+		#bpy.data.objects["Legs - Dyneema Leggings 2 - Female"].hide_render = False
+		bpy.data.objects["Vest - Dress Uniform - Female"].hide_render = False
+		bpy.data.objects["Legs - Dress Uniform Pants - Female"].hide_render = False
+		bpy.data.objects["Vest - Zylon Vest - Female"].hide_render = False
+		bpy.data.objects["Legs - Zylon Pants - Female"].hide_render = False
 
-		for j in range(5,26):
+		for j in range(5,6):
+			helpers.disablePropRenderlayer(j)
+		for j in range(10,26):
 			helpers.disablePropRenderlayer(j)
 
-	#Gear rework
+	#Camo Props
 	elif renderSet == 17:
+		bpy.data.objects["Body - RGM - CamoShirt"].hide_render = False
+		bpy.data.objects["Body - RGM - CamoLegs"].hide_render = False
+		bpy.data.objects["Hat - Booney"].hide_render = False
+		bpy.data.objects["Hat - Camo Helmet"].hide_render = False
+		#Ghillie Suit
+		bpy.data.objects["Ghillie - Arms"].hide_render = False
+		bpy.data.objects["Ghillie - Torso"].hide_render = False
+		bpy.data.objects["Ghillie - Boots"].hide_render = False
+		bpy.data.objects["Ghillie - Pants"].hide_render = False
+		bpy.data.objects["Ghillie - Hood"].hide_render = False
+		bpy.data.objects["Ghillie - Arms"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - RGM"]
+		bpy.data.objects["Ghillie - Torso"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - RGM"]
+		bpy.data.objects["Ghillie - Pants"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - RGM"]
+		bpy.data.objects["Ghillie - Hood"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - RGM"]
+
+		# Change objects depending on the body
+		if bpy.data.objects["Body - FGM"].hide_render == False or bpy.data.objects["Body - FGM - Head"].hide_render == False:
+			# Hide RGM objects
+			bpy.data.objects["Hat - Booney"].hide_render = True
+			bpy.data.objects["Body - RGM - CamoShirt"].hide_render = True
+			bpy.data.objects["Body - RGM - CamoLegs"].hide_render = True
+			# Show RGF specific ones
+			bpy.data.objects["Hat - Booney - Female"].hide_render = False
+			bpy.data.objects["Body - FGM - CamoShirt"].hide_render = False
+			bpy.data.objects["Body - FGM - CamoLegs"].hide_render = False
+			# Modifiers
+			bpy.data.objects["Ghillie - Arms"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - FGM"]
+			bpy.data.objects["Ghillie - Torso"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - FGM"]
+			bpy.data.objects["Ghillie - Pants"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - FGM"]
+			bpy.data.objects["Ghillie - Hood"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - FGM"]
+			
+		elif bpy.data.objects["Body - BGM"].hide_render == False:
+			# Hide RGM objects
+			bpy.data.objects["Body - RGM - CamoShirt"].hide_render = True
+			bpy.data.objects["Body - RGM - CamoLegs"].hide_render = True
+			# Show BGM specific ones
+			bpy.data.objects["Body - BGM - CamoShirt"].hide_render = False
+			bpy.data.objects["Body - BGM - CamoLegs"].hide_render = False
+			
+			# Modifiers
+			bpy.data.objects["Ghillie - Arms"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - BGM"]
+			bpy.data.objects["Ghillie - Torso"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - BGM"]
+			bpy.data.objects["Ghillie - Pants"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - BGM"]
+			bpy.data.objects["Ghillie - Hood"].modifiers["Shrinkwrap"].target = bpy.data.objects["Body - BGM"]
+			
+		for j in range(3,7):
+			helpers.disablePropRenderlayer(j)
+		helpers.disablePropRenderlayer(8)
+		for j in range(10,20):
+			helpers.disablePropRenderlayer(j)
+		helpers.disablePropRenderlayer(23)
+		helpers.disablePropRenderlayer(24)
+		helpers.disablePropRenderlayer(25)
+
+	#Gear rework
+	elif renderSet == 18:
 		bpy.data.objects["Face - NVG 1"].hide_render = False
 		bpy.data.objects["Face - NVG 3"].hide_render = False
 		bpy.data.objects["Face - NVG 4"].hide_render = False
@@ -833,7 +883,7 @@ for i in range(len(animationArray)):
 		for j in range(4,26):
 			helpers.disablePropRenderlayer(j)
 
-	elif renderSet == 18:
+	elif renderSet == 19:
 		bpy.data.objects["Weapon - M1911"].hide_render = False
 		bpy.data.objects["Weapon - M1911 - Left Hand"].hide_render = False
 		bpy.data.objects["Weapon - VZ61 MP"].hide_render = False
@@ -940,7 +990,7 @@ for i in range(len(animationArray)):
 		for j in range(25,26):
 			helpers.disablePropRenderlayer(j)
 
-	elif renderSet == 19:
+	elif renderSet == 20:
 		bpy.data.objects["Weapon - Agram 2000 MP"].hide_render = False
 		bpy.data.objects["Weapon - Agram 2000 MP - Left Hand"].hide_render = False
 		bpy.data.objects["Weapon - Mini SAF MP"].hide_render = False
@@ -1051,7 +1101,7 @@ for i in range(len(animationArray)):
 		for j in range(25,26):
 			helpers.disablePropRenderlayer(j)
 
-	elif renderSet == 20:
+	elif renderSet == 21:
 		bpy.data.objects["Weapon - VZ82 MP"].hide_render = False
 		bpy.data.objects["Weapon - VZ82 MP - Left Hand"].hide_render = False
 		bpy.data.objects["Weapon - Hi-Power"].hide_render = False
@@ -1152,7 +1202,7 @@ for i in range(len(animationArray)):
 		for j in range(25,26):
 			helpers.disablePropRenderlayer(j)
 
-	elif renderSet == 21:
+	elif renderSet == 22:
 		bpy.data.objects["Weapon - Automag III"].hide_render = False
 		bpy.data.objects["Weapon - Automag III - Left Hand"].hide_render = False
 		bpy.data.objects["Weapon - Tokarev"].hide_render = False
@@ -1259,7 +1309,7 @@ for i in range(len(animationArray)):
 		for j in range(25,26):
 			helpers.disablePropRenderlayer(j)
 
-	elif renderSet == 22:
+	elif renderSet == 23:
 		bpy.data.objects["Weapon - M83 Premier Grade"].hide_render = False
 		bpy.data.objects["Weapon - M83 Premier Grade - Left Hand"].hide_render = False
 		bpy.data.objects["Weapon - Redhawk"].hide_render = False
@@ -1344,15 +1394,14 @@ for i in range(len(animationArray)):
 		for j in range(19,26):
 			helpers.disablePropRenderlayer(j)
 
-	elif renderSet == 23:
-		bpy.data.objects["Weapon - Shotgun"].hide_render = False
-		bpy.data.objects["Weapon - SPAS12"].hide_render = False
+	elif renderSet == 24:
+		bpy.data.objects["Vest - EOD"].hide_render = True
+		#bpy.data.objects["Vest - EOD - BGM"].hide_render = False
+		bpy.data.objects["Legs - EOD"].hide_render = False
 
-		for j in range(1,15):
+		for j in range(1,19):
 			helpers.disablePropRenderlayer(j)
-		for j in range(16,17):
-			helpers.disablePropRenderlayer(j)
-		for j in range(18,26):
+		for j in range(20,26):
 			helpers.disablePropRenderlayer(j)
 
 	# RENDER AWAYYY!

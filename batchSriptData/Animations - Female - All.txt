@@ -42,6 +42,7 @@
 ("Prone - Empty Hands - Roll - Female",8,"F_ROLL",8),
 ("Prone - Empty Hands - Hit and Die - Female",22,"F_P_DIE",8),
 ("Standing - Punch",24,"F_PUNCH",8),
+("Standing - Blunt Strike",24,"F_BLUNT",8),
 ("Standing - Empty Hands - Karate punch",24,"F_K_PUNCH",8),
 ("Standing - Empty Hands - Karate low kick",44,"F_K_LOWKICK",8),
 ("Standing - Empty Hands - Karate spin kick",70,"F_K_SPINKICK",8),

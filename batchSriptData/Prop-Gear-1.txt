@@ -19,9 +19,9 @@
 ;Hats.stp :: Prop17 :: _Guardvest
 ;Hats.stp :: Prop18 :: _Bigradio
 ;Hats.stp :: Prop19 :: _Headset
-Hats.stp :: Prop20 :: _SWATvest
-;Hats.stp :: Prop21 :: _CP
-;Hats.stp :: Prop22 :: _Medradio
+;Hats.stp :: Prop20 :: _SWATvest
+Hats.stp :: Prop21 :: _CP
+Hats.stp :: Prop22 :: _Medradio
 ;Hats.stp :: Prop23 :: _CP2
 ;Hats.stp :: Prop24 :: _CP3
-Hats.stp :: Prop25 :: _SWATlegs
+;Hats.stp :: Prop25 :: _SWATlegs

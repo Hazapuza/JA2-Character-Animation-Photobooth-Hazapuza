@@ -18,5 +18,5 @@ Hats.stp :: Prop14 :: _spectra
 Hats.stp :: Prop15 :: _holster
 Hats.stp :: Prop16 :: _holster_l
 Hats.stp :: Prop17 :: _eod_h
-Hats.stp :: Prop18 :: _eod_v
-Hats.stp :: Prop19 :: _eod_l
+;Hats.stp :: Prop18 :: _eod_v
+;Hats.stp :: Prop19 :: _eod_l

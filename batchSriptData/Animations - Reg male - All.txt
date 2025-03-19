@@ -7,6 +7,7 @@
 ("Standing - Empty Hands - Open door",10,"S_OPEN",8),
 ("Standing - Empty Hands - Pickup",5,"S_PICKUP",8),
 ("Standing - Punch",24,"S_PUNCH",8),
+("Standing - Blunt Strike",24,"S_BLUNT",8),
 ("Standing - Empty Hands - Hit and die",33,"S_DIE2",8),
 ("Standing - Empty Hands - Hit and die 2",35,"S_D_FWD",8),
 ("Standing - Empty Hands - Flyback hit",23,"S_DIEBAC",8),

@@ -62,9 +62,9 @@ x ballcap
 riot shield
 x camo pants
 x camo shirt
-dress cap
-dress shirt
-fur hat
+x dress cap
+x dress shirt
+x fur hat
 x ghillie hat
 x ghillie vest
 x ghillie pants

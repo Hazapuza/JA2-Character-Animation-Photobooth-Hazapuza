@@ -59,7 +59,7 @@ x Radio
 x crowbar
 x knee pads
 x ballcap
-riot shield
+riot shield (needs animations)
 x camo pants
 x camo shirt
 x dress cap
@@ -68,5 +68,5 @@ x fur hat
 x ghillie hat
 x ghillie vest
 x ghillie pants
-cowboy hat (FOR TEX!)
-hedge trimmer
+x cowboy hat (FOR TEX!)
+hedge trimmer (needs animations)

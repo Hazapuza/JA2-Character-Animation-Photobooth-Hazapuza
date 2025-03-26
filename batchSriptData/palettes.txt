@@ -8,3 +8,4 @@ camoprops.stp
 Colormap.act
 swat_blue.act
 guns_desert_tan.act
+guns_universal_v3.act
